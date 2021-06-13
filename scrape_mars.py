@@ -14,6 +14,7 @@ def scrape():
 executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
+
 ## Scrap Mars Site - Retrieve Recent News
 
 # Defining url and visiting link for Mars (https://redplanetscience.com/)
@@ -28,6 +29,7 @@ soup = BeautifulSoup(html, 'html.parser')
 news_title = soup.find('div', class_='content_title').text
 news_p = soup.find('div', class_='article_teaser_body').text
 
+
 ## JPL Mars Space Images - Featured Image
 
 # Defining url and visiting link
@@ -40,7 +42,6 @@ soup = BeautifulSoup(html, 'html.parser')
 
 # Scrapping featured_image_url, added url to relative path
 featured_image_url = url + soup.find('img', class_='headerimage')['src']
-
 
 
 ## Mars Facts
