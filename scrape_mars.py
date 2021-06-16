@@ -65,9 +65,6 @@ def scrape():
     # Set index to Description
     mars_compare_df.set_index ("Mars - Earth Comparison", inplace=True)
 
-    # Print Dara Frame
-    mars_compare_df
-
     # Convert into a Data Frame the Mars Fact [1]
     mars_fact_df = mars_facts[1]
 
