@@ -77,9 +77,6 @@ def scrape():
     ## Set index to Description
     mars_fact_df.set_index ("Descripition", inplace=True)
 
-    # Print Dara Frame
-    mars_fact_df
-
     # Save html code to folder Assets
     html_table = mars_fact_df.to_html()
 
@@ -128,7 +125,7 @@ def scrape():
             'news_title': news_title,
             'news_p': news_p,
             'featured_image_url': featured_image_url,
-            'mars_fact_df': html_table,
+            'mars_facts': html_table,
             'hemispheres_info': hemispheres_info
         }
 
