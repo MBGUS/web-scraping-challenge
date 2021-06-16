@@ -121,8 +121,7 @@ def scrape():
     
         # Create full image url
         img_url = hemispheres_url + soup.find("img", class_="wide-image")["src"]
-
-	    hemispheres_info.append({"title" : title, "img_url" : img_url})
+        hemispheres_info.append({"title" : title, "img_url" : img_url})
     
     # Store data in a dictionary
     mars_data = {
